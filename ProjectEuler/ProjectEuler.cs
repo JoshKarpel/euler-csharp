@@ -8,7 +8,7 @@ namespace ProjectEuler {
 
             Func<long> solver;
             if (!solver_dictionary.TryGetValue(args[0], out solver)) {
-                string not_found_msg = String.Format("Couldn't find a solver for {0}", args[0]);
+                var not_found_msg = String.Format("Couldn't find a solver for {0}", args[0]);
                 Console.WriteLine(not_found_msg);
                 System.Environment.Exit(0);
             }
@@ -22,6 +22,7 @@ namespace ProjectEuler {
             var solver_dictionary = new Dictionary<string, Func<long>>();
 
             solver_dictionary.Add("001", solvers.P001.Solve);
+            solver_dictionary.Add("002", solvers.P002.Solve);
 
             return solver_dictionary;
         }
