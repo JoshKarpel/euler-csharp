@@ -46,6 +46,8 @@
     <Compile Include="Properties\AssemblyInfo.cs"/>
     <Compile Include="solvers\P001.cs"/>
     <Compile Include="solvers\P002.cs"/>
+    <Compile Include="solvers\P003.cs"/>
+    <Compile Include="solvers\Primes.cs"/>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

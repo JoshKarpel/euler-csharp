@@ -1,7 +1,4 @@
-﻿using System;
-
-
-namespace ProjectEuler.solvers {
+﻿namespace ProjectEuler.solvers {
     public static class P002 {
         public static long Solve() {
             ulong fibPrev = 1;
