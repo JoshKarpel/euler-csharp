@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace ProjectEuler.solvers {
-    public static class Primes {
-        public static List<ulong> PrimeFactorization(ulong n) {
+    public static class EulerMath {
+        public static IEnumerable<ulong> PrimeFactorization(ulong n) {
             var factors = new List<ulong>();
 
             while (n % 2 == 0) {
@@ -23,6 +24,16 @@ namespace ProjectEuler.solvers {
             }
 
             return factors;
+        }
+
+        public static ulong PrimeFactorizationCounterProduct(Dictionary<ulong, ulong> factorCounter) {
+            ulong result = 1;
+
+            foreach (var pair in factorCounter) {
+                result *= (ulong)Math.Pow(pair.Key, pair.Value);
+            }
+
+            return result;
         }
     }
 }
