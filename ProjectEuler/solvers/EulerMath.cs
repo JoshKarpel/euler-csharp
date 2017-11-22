@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ProjectEuler.solvers {
     public static class EulerMath {
@@ -30,10 +32,34 @@ namespace ProjectEuler.solvers {
             ulong result = 1;
 
             foreach (var pair in factorCounter) {
-                result *= (ulong)Math.Pow(pair.Key, pair.Value);
+                result *= (ulong) Math.Pow(pair.Key, pair.Value);
             }
 
             return result;
+        }
+
+        public static IEnumerable<ulong> SieveOfEratosthenes(int n) {
+            var sieve = new BitArray(n, true) {
+                [0] = false,
+                [1] = false
+            };
+
+            var primes = new List<ulong>();
+
+            for (ulong p = 2; p < (ulong) n; p++) {
+                if (sieve[(int) p]) {
+                    primes.Add(p);
+                    var x = p * p;
+
+                    while (x < (ulong) n) {
+                        sieve[(int) x] = false;
+                        x += p;
+                    }
+                }
+            }
+
+
+            return primes;
         }
     }
 }

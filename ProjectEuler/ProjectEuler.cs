@@ -24,6 +24,7 @@ namespace ProjectEuler {
                 {"002", solvers.P002.Solve},
                 {"003", solvers.P003.Solve},
                 {"005", solvers.P005.Solve},
+                {"010", solvers.P010.Solve},
             };
 
 
