@@ -11,9 +11,11 @@ namespace ProjectEuler {
                 Console.WriteLine(notFoundMsg);
                 Environment.Exit(0);
             }
+            var stopwatch = System.Diagnostics.Stopwatch.StartNew();
             var answer = solver();
+            stopwatch.Stop();
 
-            var solvedMsg = $"Answer: {answer}";
+            var solvedMsg = $"Answer: {answer} | Elapsed Time: {((float) stopwatch.ElapsedMilliseconds / 1000)} seconds";
             Console.WriteLine(solvedMsg);
         }
 
