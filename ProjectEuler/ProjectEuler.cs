@@ -6,8 +6,7 @@ namespace ProjectEuler {
         public static void Main(string[] args) {
             var solverDictionary = GetSolverDictionary();
 
-            Func<long> solver;
-            if (!solverDictionary.TryGetValue(args[0], out solver)) {
+            if (!solverDictionary.TryGetValue(args[0], out var solver)) {
                 var notFoundMsg = $"Couldn't find a solver for {args[0]}";
                 Console.WriteLine(notFoundMsg);
                 Environment.Exit(0);
@@ -24,6 +23,7 @@ namespace ProjectEuler {
                 {"002", solvers.P002.Solve},
                 {"003", solvers.P003.Solve},
                 {"005", solvers.P005.Solve},
+                {"006", solvers.P006.Solve},
                 {"010", solvers.P010.Solve},
             };
 

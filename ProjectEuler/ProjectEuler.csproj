@@ -49,6 +49,7 @@
       <Compile Include="solvers\P003.cs"/>
       <Compile Include="solvers\P005.cs"/>
       <Compile Include="solvers\EulerMath.cs"/>
+      <Compile Include="solvers\P006.cs"/>
       <Compile Include="solvers\P010.cs"/>
       <Compile Include="solvers\Utils.cs"/>
   </ItemGroup>

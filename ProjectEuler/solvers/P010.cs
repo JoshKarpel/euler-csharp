@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ProjectEuler.solvers {
+﻿namespace ProjectEuler.solvers {
     public class P010 {
         public static long Solve() {
             ulong acc = 0;

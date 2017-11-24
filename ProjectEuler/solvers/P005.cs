@@ -16,8 +16,7 @@ namespace ProjectEuler.solvers {
 
             foreach (var counter in factorCounters) {
                 foreach (var pair in counter) {
-                    ulong currentCount;
-                    if (targetFactorization.TryGetValue(pair.Key, out currentCount)) {
+                    if (targetFactorization.TryGetValue(pair.Key, out var currentCount)) {
                         targetFactorization[pair.Key] = Math.Max(currentCount, pair.Value);
                     }
                     else {
