@@ -61,5 +61,13 @@ namespace ProjectEuler.solvers {
 
             return primes;
         }
+
+        public static bool IsPythagoreanTriplet(ulong a, ulong b, ulong c) {
+            var triplet = new List<ulong>(new ulong[] {a, b, c});
+            triplet.Sort();
+
+
+            return (ulong) Math.Pow(triplet[0], 2) + (ulong) Math.Pow(triplet[1], 2) == (ulong) Math.Pow(triplet[2], 2);
+        }
     }
 }
